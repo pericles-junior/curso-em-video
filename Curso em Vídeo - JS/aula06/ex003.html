@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(109, 109, 174);
+        color: white;
+        font: normal 20px Arial;
+      }
+      h1 {
+        color: rgb(255, 212, 22);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá mundo!</h1>
+    <p>Sejam bem-vindos ao meu primeiro site.</p>
+
+    <script>
+      const num1 = parseFloat(
+        prompt("Digite o valor que quer depositar:")
+      );
+      alert(
+        `O valor a ser depositado é:\n\n ${num1.toLocaleString(
+          "pt-br",
+          { style: "currency", currency: "BRL" }
+        )}`
+      );
+    </script>
+  </body>
+</html>
