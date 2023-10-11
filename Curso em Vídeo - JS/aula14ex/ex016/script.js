@@ -1,18 +1,15 @@
-function carregar () {
-  let msg = document.querySelector('div#msg')
-  let img = document.getElementById('imagem')
-  let date = new Date()
-  let hour = date.getHours()
-  msg.innerHTML = `Agora são ${hour} horas.`
+  let ini = document.querySelector('input#ininumber')
+  let fim = document.querySelector('input#fimnumber')
+  let passo = document.querySelector('input#passonumber')
+  let res = document.querySelector('div#res')
+
+function contar () {
   
-  if (hour >= 0 && hour < 12) {
-    document.body.style.background = '#79AC78'
-    img.src = 'foto_manha.png'
-  } else if (hour >= 12 && hour < 18) {
-    document.body.style.background = '#CD5C08'
-    img.src = 'foto_tarde.png'
-  } else {
-    document.body.style.background = '#132043'
-    img.src = 'foto_noite.png'
-  }
+    if (!ini.value) {
+   res.innerHTML = `Impossível contar!`
+    } else if (passo.value == 0) {
+      alert(`Passo inválido! Considerando PASSO 1`)
+      for (ini.value; ini.value > fim.value; ini.value++)
+    }
+  
 }
